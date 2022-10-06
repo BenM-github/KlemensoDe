@@ -274,6 +274,10 @@ footer #breadcrumb a {
     text-decoration: none;
 }
 
+footer #breadcrumb a:hover {
+    text-decoration: underline;
+}
+
 footer .breadcrumb-pointer {
     margin: 0 .3rem;
 }
