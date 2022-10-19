@@ -3,8 +3,6 @@
 
 - design and fill smartphone nav
 
-- Change comment shadow to own shadow with media querry
-
 - Add scripts
     - Add Smartphone Nav
     - Add Smartphone triggers
