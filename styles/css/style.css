@@ -1,0 +1,651 @@
+/*#region Fonts */
+@font-face {
+    font-family: "DejaVu Sans";
+    src: url("../fonts/DejaVuSans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DejaVu Serif";
+    src: url("../fonts/DejaVuSerif.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DejaVu Mono";
+    src: url("../fonts/DejaVuSansMono.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DejaVu Sans Bold";
+    src: url("../fonts/DejaVuSans-Bold.ttf") format("truetype");
+}
+
+/*#endregion Fonts */
+
+
+/*#region general */
+body {
+    font: 12px 'DejaVu Sans', sans-serif;
+    font-weight: 100;
+    /*
+    word-wrap: break-word;
+    */
+}
+
+#wrapper {
+    position: relative;
+    justify-content: center;
+    background-color: transparent;
+    background: transparent;
+
+    margin: 0;
+    padding: 0;
+}
+
+/*#endregion general */
+
+
+/*#region Header */
+
+/*#region header (normal screen)*/
+header {
+    z-index: 100;
+    height: 197px;
+
+    border-top: 0;
+    border-right: 2px;
+    border-bottom: 0;
+    border-left: 2px;
+    border-style: solid;
+    border-color: #d5d5d5;
+
+    background-color: #fff;
+    background-image: url(../background/Banner_Ameise_v3.png);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
+header #branding {
+    box-sizing: border-box;
+    padding: 20px 0 0 20px;
+}
+
+header #nav {
+    justify-content: flex-end;
+}
+
+header nav #nav-menu {
+    padding: 0;
+    margin: 24px 0 0 0;
+}
+
+header nav #nav-menu .menu-top-lvl {
+    position: relative;
+    height: 24px;
+    width: 6rem;
+    margin-bottom: 4px;
+}
+
+header nav #nav-menu .menu-top-lvl a {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0 .3rem;
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+}
+
+header nav #nav-menu ul {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+header nav #nav-menu .menu-top-lvl-link {
+    width: 6rem;
+    background-color: #fff;
+    -webkit-box-shadow: -22px 0px 40px -13px #000000;
+    box-shadow: -22px 0px 40px -13px #000000;
+}
+
+
+
+header nav #nav-menu .menu-sub-lvl {
+    overflow: hidden;
+    max-width: 0;
+    /*
+    default value is 800ms. because the is no js evolved and width:auto does not work with animations I had to set the speed lower
+    */
+    transition: all 1600ms ease;
+}
+
+header nav #nav-menu .menu-top-lvl-link:hover+.menu-sub-lvl,
+header nav #nav-menu .menu-sub-lvl:hover {
+    max-width: 1000%;
+    pointer-events: all;
+}
+
+header nav #nav-menu .menu-sub-lvl li {
+    height: 100%;
+}
+
+header nav #nav-menu .menu-sub-lvl a {
+    box-sizing: border-box;
+    padding: 0 .5rem;
+    background-color: #fff;
+}
+
+
+header nav #nav-menu .menu-sub-lvl a::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: 0;
+    height: 50%;
+    width: 2px;
+    background: linear-gradient(90deg, black, white);
+}
+
+header nav #nav-menu .menu-sub-lvl li:last-of-type a {
+    padding: 0 1rem 0 .5rem;
+}
+
+header nav #nav-menu .menu-sub-lvl li:last-of-type a::after {
+    top: 0;
+    height: 100%;
+    width: .8rem;
+    background: linear-gradient(100deg, rgb(255, 255, 255) 20%, rgba(132, 132, 132, 0.2));
+}
+
+header nav #nav-menu .current-page,
+header nav #nav-menu .menu-top-lvl-link:hover,
+header nav #nav-menu .menu-sub-lvl a:hover {
+    /* changes link color on hover or when a user is currently on this page */
+    background-color: #0768a6 !important;
+    color: #fff !important;
+}
+
+header nav #nav-menu .menu-sub-lvl a::after,
+header nav #nav-menu .menu-sub-lvl a:hover::after {
+    display: none;
+}
+
+/* search bar */
+header nav #search-bar {
+    position: relative;
+    height: 24px;
+    background-color: #fff;
+}
+
+header nav #search-bar:hover::after {
+    content: 'there is no fuction for this field at the moment';
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    width: 15rem;
+
+    box-sizing: border-box;
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: 6px;
+
+    color: black;
+    background-color: #c9cacc;
+}
+
+header nav #search-bar #search-bar-input {
+    height: 100%;
+    max-width: 0;
+    border: 0;
+    transition: all ease 500ms;
+}
+
+header nav #search-bar:hover #search-bar-input {
+    max-width: 100%;
+}
+
+header nav #search-bar-btn {
+    float: right;
+    height: 100%;
+    width: 30px;
+    box-sizing: border-box;
+    padding: 0 0 0 4px;
+    border: 0;
+
+    background: url(../images/search.svg) no-repeat left;
+    filter: invert(100%) sepia(1%) saturate(1506%) hue-rotate(250deg) brightness(109%) contrast(72%);
+}
+
+/*
+header nav #search-btn-icon {
+    filter: invert(100%) sepia(1%) saturate(1506%) hue-rotate(250deg) brightness(109%) contrast(72%);
+}
+*/
+
+/*#endregion header (normal screen) */
+
+/*#region header (small screen) */
+@media all and (max-width: 767px) {
+
+    /* sm and smaller */
+    header #branding {
+        margin: 0 auto;
+    }
+}
+
+header #nav-trigger-wrapper {
+    justify-content: center;
+}
+
+#small-sceen-nav {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 1000;
+    height: 100%;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+/* just for test reasons */
+#small-sceen-nav:hover {
+    left: 0;
+}
+
+/*#endregion header (small screen) */
+
+/*#endregion Header */
+
+
+/*#region Main */
+
+/*#region main (general) */
+main {
+    z-index: 100;
+    padding: 7vh 0 25vh 0;
+
+    border-top: 0;
+    border-right: 2px;
+    border-bottom: 0;
+    border-left: 2px;
+    border-style: solid;
+    border-color: #d5d5d5;
+
+    background-color: #fff;
+}
+
+main h5 {
+    font-size: 1.25rem;
+}
+
+main h6 {
+    font-size: 1.1rem;
+}
+
+main a {
+    text-decoration: none;
+}
+
+main ul {
+    padding: 0 0 0 3rem;
+    list-style-image: url(../images/list_icon.png);
+    color: #0768a6;
+}
+
+main ul li {
+    padding: 0 0 .3rem .5rem;
+}
+
+main #content article {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 1.5rem .5rem 1.5rem;
+    margin: .2rem 0 0 0;
+}
+
+@media all and (min-width: 992px) {
+    main #content article {
+        padding: 0 .5rem .5rem 2rem;
+    }
+}
+
+/*#endregion main (general) */
+
+/*#region Articles */
+#site-headline {
+    padding: 0 1rem .5rem 2rem;
+}
+
+.article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2%;
+    height: 1px;
+    /* width + left = 100% --> to make the gap between the line and the content border */
+    width: 98%;
+    background-color: #c9cacc;
+}
+
+.article-tag {
+    /* height and width are equal to the bg-image props */
+    height: 31px;
+    width: 92px;
+    box-sizing: border-box;
+    /* tag text alignment */
+    padding: 6px 0 0 8px;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+
+.article-tag.grey {
+    background: url(../images/top_g.png) no-repeat left;
+}
+
+.article-tag.red {
+    background: url(../images/top_r.png) no-repeat left;
+}
+
+.article-tag.blue {
+    background: url(../images/top_b.png) no-repeat left;
+}
+
+.announcement {
+    position: relative;
+    padding-top: 1rem !important;
+    background-color: #F3F3F3;
+}
+
+.announcement::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    height: 19px;
+    width: 33px;
+    background: url(../images/stone02.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*#endregion Articles */
+
+/*#region Comments */
+#comment-headline {
+    padding: 0 1rem .5rem 1rem;
+}
+
+.comment {
+    position: relative;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 0 1rem .5rem 1rem;
+    margin: 0 0 1rem 0;
+}
+
+@media all and (min-width: 992px) {
+    .comment {
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .175);
+        /*
+        origin: bootstrap 5
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+        */
+    }
+
+}
+
+@media all and (max-width: 576px) {
+
+    /*
+    sm and smaller
+    gives comments the full width, so users on smartphones can read the content
+    */
+    .comment {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 991px) {
+
+    /* 
+    lg and smaller
+    makes comments look more like articles so the look a bit better on smaller screens 
+    */
+    .comment::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 2%;
+        height: 1px;
+        /* width + left = 100% --> to make the gap between the line and the content border */
+        width: 98%;
+        background-color: #c9cacc;
+    }
+
+}
+
+/*#endregion Comments */
+
+/*#endregion Main */
+
+
+/*#region Footer */
+
+/*#region footer (general) */
+footer {
+    z-index: 200;
+    height: 52px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 0.7rem;
+
+    color: #808080;
+}
+
+footer .footer-el {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* we have to do it this way to display the footer hole */
+footer #footer-hole {
+    background: url(../images/footer_bg_hole.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+footer .footer-bg {
+    background: url(../images/footer_bg.png);
+    background-repeat: repeat-x;
+    background-position: left;
+}
+
+/*#endregion footer (general) */
+
+/*#region breadcrumb */
+footer #breadcrumb a {
+    position: relative;
+    margin: 0 0 0 32px;
+
+    color: #808080;
+    text-decoration: none;
+}
+
+footer #breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+footer #breadcrumb a:first-child {
+    margin: 0;
+}
+
+footer #breadcrumb a::before {
+    position: absolute;
+    top: 0;
+    left: -32px;
+    content: '';
+    height: 16px;
+    width: 32px;
+    /* the original size of the image is 21 x 16 but for a little margin the pseudo-selector size is a bit bigger than that */
+    background: url(../images/breadcrumbs_li.png) no-repeat center;
+}
+
+footer #breadcrumb a:first-child::before {
+    display: none;
+}
+
+/*#endregion breadcrumb */
+
+/*#region submenu */
+footer #footer-submenu {
+    position: relative;
+    padding: 0 1rem;
+}
+
+footer #footer-submenu-btn {
+    height: 40px;
+    width: 16px;
+    padding: .5rem;
+    background: url(../images/footer_submenu_icon.png) no-repeat center;
+    cursor: pointer;
+}
+
+footer #footer-submenu-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    position: absolute;
+    z-index: 250;
+    bottom: -1000%;
+    left: 0;
+    transition: all ease 500ms;
+    padding: .5rem .5rem 1.5rem .3rem;
+
+    background-image: url(../images/footer_submenu_bg_top.png), url(../images/footer_submenu_bg_middle.png), url(../images/footer_submenu_bg_bottom.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom, center, top;
+}
+
+footer #footer-submenu-links a {
+    color: #c9cacc;
+    text-decoration: none;
+}
+
+footer #footer-submenu-links a:hover {
+    text-decoration: underline;
+}
+
+footer #footer-submenu-btn:hover+#footer-submenu-links,
+footer #footer-submenu-links:hover {
+    bottom: 80%;
+}
+
+/*#endregion submenu */
+
+/*#region resize */
+footer #text-resize {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+footer #text-resize .text-resize-btn {
+    height: 40px;
+    padding: 0 .5rem;
+
+    cursor: pointer;
+}
+
+footer #text-resize #text-decrease-btn {
+    min-width: 10px;
+    max-width: 10px;
+    background: url(../images/decrease.png) no-repeat center;
+}
+
+footer #text-resize #text-normal-btn {
+    min-width: 12px;
+    max-width: 12px;
+    background: url(../images/normal.png) no-repeat center;
+}
+
+footer #text-resize #text-increase-btn {
+    min-width: 14px;
+    max-width: 14px;
+    background: url(../images/increase.png) no-repeat center;
+}
+
+footer #text-resize .text-resize-btn:hover::after {
+    content: 'there is no fuction for this btn at the moment';
+    position: absolute;
+    top: -3rem;
+    left: -50%;
+    width: 10rem;
+
+    box-sizing: border-box;
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: 6px;
+
+    color: black;
+    background-color: #c9cacc;
+}
+
+/*#endregion resize*/
+
+/*#endregion Footer */
+
+
+/*#region Background */
+/*
+    we may could save some calculation power when we change the current background to a body background background image has to be changed to the body background so the position fixed does not need so much calculation power for the fixed position.
+*/
+#background {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    /* this background image is static so it has to be changed into the html to influence it with js */
+    background: url(../background/Martin_Ameise.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#background #bg-info {
+    display: none;
+}
+
+#background #bg-btn {
+    position: absolute;
+    cursor: pointer;
+    /* the btn's position is a bit higher than the footer's height (52px)*/
+    bottom: 55px;
+    left: 0;
+    color: #fff;
+}
+
+#background #bg-btn:hover {
+    text-decoration: underline;
+}
+
+/*#endregion Background */

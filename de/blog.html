@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Klemenso</title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Blog &#124 klemenso.de</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/css/style.css">
 </head>
 <body>
     
@@ -15,8 +15,8 @@
 
         <header class="col-sm-8 row p-0">
             <div id="branding" class="col-sm-5">
-                <a href="#">
-                    <img src="./logo.png" class="img-fluid" alt="">
+                <a href="../index.html">
+                    <img src="../logo.png" class="img-fluid" alt="">
                 </a>
             </div>
 
@@ -47,7 +47,7 @@
                         </ul>
                     </li>
                     <li class="menu-top-lvl">
-                        <a href="../de/blog.html" class="menu-top-lvl-link">Blog</a>
+                        <a href="../de/blog.html" class="menu-top-lvl-link shadow-sm current-page">Blog</a>
                     </li>
                     <li class="menu-top-lvl">
                         <a href="../de/service.html" class="menu-top-lvl-link">Service</a>
@@ -79,43 +79,7 @@
         <main class="col-sm-8 g-0 row">
 <!-- content -->
             <section id="content" class="col-lg-9">
-                <article class="blank-text">
-                    <h5>Wenn aus Software Efficientware wird.</h5>
-                    <p>
-                        Ihr Ziel als Unternehmer oder Entscheider ist es, Organisation und Prozesse ständig zu optimieren, Effizienz zu steigern und Kosten zu senken.
-                    </p>
-                    <p>
-                        Unser Auftrag ist es, Sie dabei zu unterstützen – transparent und individuell mit dem Ziel, Sie dabei absolut unabhängig von unserer Dienstleistung zu machen. Durch maßgeschneiderte aber dennoch offene Efficientware-Lösungen zum Beispiel auf Basis von FileMaker, die Ihnen schnelle, direkte und nachhaltig wirksame Erfolge sichern.
-                    </p>
-                    <p>
-                        Unsere Arbeitsweise ist dabei durch den ständigen Dialog mit Ihnen geprägt. Wir sind Denker – und Macher, die nur ein Ziel haben: Sie zu begeistern!
-                    </p>
-                    <p>
-                        Willkommen bei Klemenso – The Efficientwaremaker!
-                    </p>
-                </article>
-                <article class="announcement">
-                    <h5>Umbaumaßnahmen</h5>
-                    <p>
-                        Wir verbessern unsere Website für Sie. Einige Funktionen, etwa das Kontaktformular, die Kommentarfunktion im Blog oder Newsletter-Abo stehen daher nicht zur Verfügung. Wir bitten diese Einschränkungen zu entschuldigen.
-                    </p>
-                    <p>
-                        Wollen Sie Kontakt mit uns aufnehmen, schreiben Sie uns eine <a href="#">Nachricht<< (not linked)</a> oder sagen mal Hallo unter: +49 611 16 888 900.
-                    </p>
-                    <p>
-                        Wir freuen uns auf Sie!
-                    </p>
-                </article>
-                <article class="article">
-                    <div class="article-tag grey">Info</div>
-                    <h5>.fmp[X]Berlin 2014 - The pan-European Unconference for FileMaker Developers</h5>
-                    <a href="http://www.dotfmp.com/">
-                        <img src="./content/images/dotfmp2014_banner_square.gif" alt="">
-                        <<
-                    </a>
-                    <p>
-                        Wie schon im letzten Jahr freuen wir uns wieder auf Berlin, zur 2. internationalen FileMaker Entwickler(un)konferenz in Deutschland. Am 2. bis 4. Juni 2014 treffen sich wieder FileMaker Experten aus ganz Europa zu Fachvorträgen und direkten Austausch auf sehr hohem Niveau. Der lockere und unkonventionelle Rahmen machten bereits im letzten Jahr dieses Event so besonders.
-                    </p>
+                <h5 id="site-headline">Blog</h5>
                 </article>
                 <article class="article">
                     <div class="article-tag red">News</div>
@@ -223,9 +187,9 @@
                 </article>
             </section>
 <!-- Comments -->
-            <section id="comments" class="col-lg-3 d-sm-flex flex-column align-items-center d-lg-block">
-                <h4 class="d-lg-none d-xl-none d-xxl-none">Comments</h4>
-                <article class="comment float-lg-end shadow-sm">
+            <section id="comments" class="col-lg-3 d-sm-flex flex-column d-lg-block">
+                <h5 id="comment-headline" class="d-lg-none d-xl-none d-xxl-none">Comments</h5>
+                <article class="comment float-lg-end">
                     <div class="article-tag red">/:--)</div>
                     <p>
                         Lieber Klemens,
@@ -234,10 +198,10 @@
                         haben wir schon mal DANKE gesagt? Nein? Dann wird es jetzt aber mal Zeit:
                     </p>
                     <p>
-                        <a href="#">Weiterlesen (not linked)</a>
+                        <a href="#">Weiterlesen</a>
                     </p>
                 </article>
-                <article class="comment float-lg-end shadow-sm">
+                <article class="comment float-lg-end">
                     <div class="article-tag blue">Direkt</div>
                     <p>
                         Nehmen Sie Kontakt mit uns auf. Telefon:
@@ -255,8 +219,11 @@
         <footer class="fixed-bottom row g-0">
             <div id="footer-hole" class="col-3 footer-el"></div>
             <div id="breadcrumb" class="col-6 footer-el footer-bg">
-                <a href="#">
+                <a href="../index.html">
                     Startseite
+                </a>
+                <a href="../de/blog.html">
+                    Blog
                 </a>
             </div>
             <div id="footer-content" class="col-3 footer-el footer-bg">
@@ -286,6 +253,6 @@
 
     </div>
 
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
