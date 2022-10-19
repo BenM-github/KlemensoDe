@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Service</title>
+    <title>Service &#124 klemenso.de</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../styles/css/style.css">
 </head>
 <body>
     
@@ -19,14 +19,43 @@
                     <img src="../logo.png" class="img-fluid" alt="">
                 </a>
             </div>
-            
-            <nav id="nav" class="col-sm-7 p-0 d-flex flex-column align-items-end justify-content-start">
+
+            <nav id="nav" class="col-7 p-0 d-none d-md-flex flex-column align-items-end justify-content-start">
+                <!-- will be displayed on big screens md - xxl -->
                 <ul id="nav-menu" class="w-100 d-flex flex-column align-items-end list-unstyled">
-                    <li class="menu-top-lvl shadow-sm"><a href="../sites/people.html">Menschen</a></li>
-                    <li class="menu-top-lvl shadow-sm"><a href="../sites/kompetenz.html">Kompetenz</a></li>
-                    <li class="menu-top-lvl shadow-sm"><a href="../sites/beziehung.html">Beziehung</a></li>
-                    <li class="menu-top-lvl shadow-sm"><a href="../sites/blog.html">Blog</a></li>
-                    <li class="menu-top-lvl shadow-sm"><a href="../sites/service.html">Service</a></li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/menschen.html" class="menu-top-lvl-link">Menschen</a>
+                        <ul class="menu-sub-lvl">
+                            <li><a href="../sites/credo.html">Credo</a></li>
+                            <li><a href="../sites/team.html">Team</a></li>
+                            <li><a href="../sites/jobs.html">Jobs</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/kompetenz.html" class="menu-top-lvl-link">Kompetenz</a>
+                        <ul class="menu-sub-lvl">
+                            <li><a href="../sites/arbeitsweise.html">Arbeitsweise</a></li>
+                            <li><a href="../sites/leistungsprofil.html">Leistungsprofil</a></li>
+                            <li><a href="../sites/themenfelder.html">Themenfelder</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/beziehung.html" class="menu-top-lvl-link">Beziehung</a>
+                        <ul class="menu-sub-lvl">
+                            <li><a href="../sites/credo.html">Expertiesen</a></li>
+                            <li><a href="../sites/team.html">Referenzen</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/blog.html" class="menu-top-lvl-link">Blog</a>
+                    </li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/service.html" class="menu-top-lvl-link current-page">Service</a>
+                        <ul class="menu-sub-lvl">
+                            <li><a href="../sites/kundenzugang.html">Kundenzugang</a></li>
+                            <li><a href="../sites/glossary.html">Glossary</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <form id="search-bar" class="shadow-sm" action="search">
                     <input id="search-bar-input" type="text" name="search-text-field" placeholder="Geben Sie Ihren Suchbegriff ein">
@@ -52,17 +81,49 @@
             <section id="content" class="col-lg-9">
                 <article class="blank-text">
                     <h5>
-                        placeholder
+                        Der Kunde ist König.
                     </h5>
                     <p>
-                        placeholder
+                        Hören Sie bestimmt häufiger. Nicht ausschließlich für unsere Könige ist der Servicebereich gedacht.
+                    </p>
+                </article>
+                <article class="blank-text">
+                    <h6>
+                        <a href="../sites/kundenzugang.html">
+                            Kundenzugang<<
+                        </a>
+                    </h6>
+                    <p>
+                        Der Kundenzugang ist ein geschlossener Bereich zu dem ausschließlich unser Kunden und registrierten Benutzer Zugang haben. Bitte sprechen Sie uns an.
+                    </p>
+                </article>
+                <article class="blank-text">
+                    <h6>
+                        Glossar
+                    </h6>
+                    <p>
+                        Hinweis: Die Seite »Glossar« befindet sich noch im Aufbau. Hier schon mal der Text. (°°)
+                    </p>
+                    <p>
+                        Das Glossar ist eine Sammlung von Begriffen, die uns bei der täglichen Arbeit begegnen und die wir hier kurz erklären möchten. Anregungen sind immer willkommen. Und manches ist nicht ganz ernst gemeint.
+                    </p>
+                </article>
+                <article class="blank-text">
+                    <h6>
+                        Downloads
+                    </h6>
+                    <p>
+                        Hinweis: Auch die Seite »Downloads« muss noch fertiggestellt werden. Was wir dort veröffentlichen werden, möchten wir aber Ihnen nicht auch noch vorenthalten.
+                    </p>
+                    <p>
+                        Unter Downloads finden Sie all das, was wir zum Download zur Verfügung stellen. Dies können Demo-Dateien, Code snippets, Artikel für Fachmagazine, Bilder, usw. sein. Schauen Sie sich um.
                     </p>
                 </article>
             </section>
 <!-- Comments -->
-            <section id="comments" class="col-lg-3 d-sm-flex flex-column align-items-center d-lg-block">
-                <h4 class="d-lg-none d-xl-none d-xxl-none">Comments</h4>
-                <article class="comment float-lg-end shadow-sm">
+            <section id="comments" class="col-lg-3 d-sm-flex flex-column d-lg-block">
+                <h5 id="comment-headline" class="d-lg-none d-xl-none d-xxl-none">Comments</h5>
+                <article class="comment float-lg-end">
                     <div class="article-tag red">/:--)</div>
                     <p>
                         Lieber Klemens,
@@ -74,7 +135,7 @@
                         <a href="#">Weiterlesen</a>
                     </p>
                 </article>
-                <article class="comment float-lg-end shadow-sm">
+                <article class="comment float-lg-end">
                     <div class="article-tag blue">Direkt</div>
                     <p>
                         Nehmen Sie Kontakt mit uns auf. Telefon:
@@ -95,24 +156,24 @@
                 <a href="../index.html">
                     Startseite
                 </a>
-                <img class="breadcrumb-pointer" src="../image/breadcrumbs_li.png" alt="">
-                <a href="#">
+                <a href="../sites/service.html">
                     Service 
                 </a>
             </div>
             <div id="footer-content" class="col-3 footer-el footer-bg">
                 <div id="footer-submenu">
-                    <img src="../image/footer_icon_submenu.png" id="footer-submenu-icon" alt="">
+                    <div id="footer-submenu-btn"></div>
                     <div id="footer-submenu-links">
-                        <a href="#">link 1</a>
-                        <a href="#">link 2</a>
-                        <a href="#">link 3</a>
+                        <a href="./agb.html">AGB</a>
+                        <a href="./impressum.html">Impressum</a>
+                        <a href="./datenschutz.html">Datenschutz</a>
+                        <a href="./disclaimer.html">Disclaimer</a>
                     </div>
                 </div>
                 <div id="text-resize">
-                    <img src="../image/decrease.png" id="text-decrease" class="text-resize-icon" alt="">
-                    <img src="../image/normal.png" id="text-normal" class="text-resize-icon" alt="">
-                    <img src="../image/increase.png" id="text-increase" class="text-resize-icon" alt="">
+                    <div id="text-decrease-btn" class="text-resize-btn"></div>
+                    <div id="text-normal-btn" class="text-resize-btn"></div>
+                    <div id="text-increase-btn" class="text-resize-btn"></div>
                 </div>
             </div>
         </footer>

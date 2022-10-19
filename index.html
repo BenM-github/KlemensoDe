@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Klemenso</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./styles/css/style.css">
 </head>
 <body>
     
@@ -19,14 +19,43 @@
                     <img src="./logo.png" class="img-fluid" alt="">
                 </a>
             </div>
-            
-            <nav id="nav" class="col-sm-7 p-0 d-flex flex-column align-items-end justify-content-start">
+
+            <nav id="nav" class="col-7 p-0 d-none d-md-flex flex-column align-items-end justify-content-start">
+                <!-- will be displayed on big screens md - xxl -->
                 <ul id="nav-menu" class="w-100 d-flex flex-column align-items-end list-unstyled">
-                    <li class="menu-top-lvl shadow-sm"><a href="./sites/people.html">Menschen</a></li>
-                    <li class="menu-top-lvl shadow-sm"><a href="./sites/kompetenz.html">Kompetenz</a></li>
-                    <li class="menu-top-lvl shadow-sm"><a href="./sites/beziehung.html">Beziehung</a></li>
-                    <li class="menu-top-lvl shadow-sm"><a href="./sites/blog.html">Blog</a></li>
-                    <li class="menu-top-lvl shadow-sm"><a href="./sites/service.html">Service</a></li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/menschen.html" class="menu-top-lvl-link">Menschen</a>
+                        <ul class="menu-sub-lvl">
+                            <li><a href="../sites/credo.html">Credo</a></li>
+                            <li><a href="../sites/team.html">Team</a></li>
+                            <li><a href="../sites/jobs.html">Jobs</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/kompetenz.html" class="menu-top-lvl-link">Kompetenz</a>
+                        <ul class="menu-sub-lvl">
+                            <li><a href="../sites/arbeitsweise.html">Arbeitsweise</a></li>
+                            <li><a href="../sites/leistungsprofil.html">Leistungsprofil</a></li>
+                            <li><a href="../sites/themenfelder.html">Themenfelder</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/beziehung.html" class="menu-top-lvl-link">Beziehung</a>
+                        <ul class="menu-sub-lvl">
+                            <li><a href="../sites/credo.html">Expertiesen</a></li>
+                            <li><a href="../sites/team.html">Referenzen</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/blog.html" class="menu-top-lvl-link">Blog</a>
+                    </li>
+                    <li class="menu-top-lvl">
+                        <a href="../sites/service.html" class="menu-top-lvl-link">Service</a>
+                        <ul class="menu-sub-lvl">
+                            <li><a href="../sites/kundenzugang.html">Kundenzugang</a></li>
+                            <li><a href="../sites/glossary.html">Glossary</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <form id="search-bar" class="shadow-sm" action="search">
                     <input id="search-bar-input" type="text" name="search-text-field" placeholder="Geben Sie Ihren Suchbegriff ein">
@@ -71,7 +100,7 @@
                         Wir verbessern unsere Website für Sie. Einige Funktionen, etwa das Kontaktformular, die Kommentarfunktion im Blog oder Newsletter-Abo stehen daher nicht zur Verfügung. Wir bitten diese Einschränkungen zu entschuldigen.
                     </p>
                     <p>
-                        Wollen Sie Kontakt mit uns aufnehmen, schreiben Sie uns eine <a href="#">Nachricht<<</a> oder sagen mal Hallo unter: +49 611 16 888 900.
+                        Wollen Sie Kontakt mit uns aufnehmen, schreiben Sie uns eine <a href="#">Nachricht<< (not linked)</a> oder sagen mal Hallo unter: +49 611 16 888 900.
                     </p>
                     <p>
                         Wir freuen uns auf Sie!
@@ -96,7 +125,7 @@
                     </p>
                     <p>
                         In den vergangenen Jahren haben wir Neuerungen in der FileMaker Produktlinie intern mit sogenannten "Rings" bewertet. Sie kennen das bestimmt auch noch, das Geräusch einer alten Kasse, deren Schublade mit einem lauten "Ring" aufgeht, wenn der Hebel nach unten gezogen wurde. 
-                        <a href="#">Weiterlesen<<</a>
+                        <a href="#">Weiterlesen<< (not linked)</a>
                     </p>
                 </article>
                 <article class="article">
@@ -107,7 +136,7 @@
                     </p>
                     <p>
                         Eine Top-Adresse in Wiesbaden, direkt am Campus "Unter den Eichen" der Hochschule RheinMain, Fachbereich Design Informatik Medien.
-                        <a href="#">Weiterlesen<<</a>
+                        <a href="#">Weiterlesen<< (not linked)</a>
                         </p>
                 </article>
                 <article class="article">
@@ -118,7 +147,7 @@
                     </p>
                     <p>
                         Ein paar Highlights vorab: Kein Warten mehr. Die gesamte Produktlinie steht in allen Sprachen sofort zur Verfügung. FileMaker Go 12 für iPhone und iPad ist kostenlos. FileMaker Pro erhält neues Dateiformat. Oberflächengestaltung mit Hilfe von Themes. Viele neue Layout-Tools und Hilfsmittel. Inhalte von Feldern vom Typ Container extern speicherbar. Window Controls ohne Plug-in steuerbar. FileMaker Server im 64-bit-Format. Eigene Prozess für Backups und Scheduls. Nachfolgend werden ein paar der Neuerungen kurz vorgestellt.
-                        <a href="#">Weiterlesen<<</a>
+                        <a href="#">Weiterlesen<< (not linked)</a>
                     </p>
                 </article>
                 <article class="article">
@@ -161,7 +190,7 @@
                         Ein Auszug:
                     </p>
                     <p>
-                        "Hierarchisch strukturierten Daten begegnet man so oft, dass man sie als solches gar nicht mehr wahrnimmt: auf einer Internetseite mit hierarchisch aufgebauter Navigationsstruktur, beim Inhaltsverzeichnis eines Buches, beim Stammbaum Ihrer Familie oder in dem Dateisystem Ihres Computers mit seinen Ordnern, Unterordnern und Dateien. [...] <a href="#">Weiterlesen<<</a>
+                        "Hierarchisch strukturierten Daten begegnet man so oft, dass man sie als solches gar nicht mehr wahrnimmt: auf einer Internetseite mit hierarchisch aufgebauter Navigationsstruktur, beim Inhaltsverzeichnis eines Buches, beim Stammbaum Ihrer Familie oder in dem Dateisystem Ihres Computers mit seinen Ordnern, Unterordnern und Dateien. [...] <a href="#">Weiterlesen<< (not linked)</a>
                         
                     </p>
                 </article>
@@ -175,7 +204,7 @@
                         Heute gegen 15:00 Uhr MEZ war es soweit. Die gesamte FileMaker 11 Produktlinie wurde in der englischen Version <a href="http://www.filemaker.de/company/media/press-releases/show.php?press=11903">veröffentlicht<<</a>. Wann die deutschen Versionen erscheinen, ist indes noch nicht bekannt.
                     </p>
                     <p>
-                        Erstmals ist es möglich, Balken-, Flächen-, Linien- und Kreisdiagramme nativ in FileMaker zu erzeugen. Layoutobjekte können mit Hilfe des neuen Inspektors in Form einer Paletten-Toolbar fast vollständig an einer Stelle eingesehen und überarbeitet werden. Liesen sich die Entwickler etwa von einem <a href="http://www.kegebein.net/blog/2009/04/something-about-filemaker-11/">Aprilscherz<<</a> inspirieren? (°.°) <a href="#">Weiterlesen<<</a>
+                        Erstmals ist es möglich, Balken-, Flächen-, Linien- und Kreisdiagramme nativ in FileMaker zu erzeugen. Layoutobjekte können mit Hilfe des neuen Inspektors in Form einer Paletten-Toolbar fast vollständig an einer Stelle eingesehen und überarbeitet werden. Liesen sich die Entwickler etwa von einem <a href="http://www.kegebein.net/blog/2009/04/something-about-filemaker-11/">Aprilscherz<<</a> inspirieren? (°.°) <a href="#">Weiterlesen<< (not linked)</a>
                         
                     </p>
                 </article>
@@ -189,7 +218,7 @@
                         Erster Teil eines Artikels im <a href="http://www.filemaker-magazin.de/">FileMaker-Magazin<<</a> in der Ausgabe 2006/03 zur den Möglichkeiten des PasteBoard-Plugins von Stefan Husch und Bernhard Schulz. Im Artikel werden Funktionsweise und Möglichkeiten vorgestellt.
                     </p>
                     <p>
-                        Auszug: "Kurz nach Erscheinen von FileMaker 8 Advanced haben die beiden Entwickler Stefan Husch und Dipl.-Ing. Bernhard Schulz das „Pasteboard-Plugin“ [1] auf den Markt gebracht. Mit diesem Plugin wurde es erstmals möglich, die Zwischenablage von FileMaker 8 Advanced auszulesen und deren Inhalt als editierbaren XMLQuelltext zur Verfügung zu stellen, zu bearbeiten und wieder in FileMaker einzufügen. Was damit alles möglich wird, werden wir in zwei Teilen an Hand von praktischen Beispielen aufzeigen. <a href="#">Weiterlesen<<</a>
+                        Auszug: "Kurz nach Erscheinen von FileMaker 8 Advanced haben die beiden Entwickler Stefan Husch und Dipl.-Ing. Bernhard Schulz das „Pasteboard-Plugin“ [1] auf den Markt gebracht. Mit diesem Plugin wurde es erstmals möglich, die Zwischenablage von FileMaker 8 Advanced auszulesen und deren Inhalt als editierbaren XMLQuelltext zur Verfügung zu stellen, zu bearbeiten und wieder in FileMaker einzufügen. Was damit alles möglich wird, werden wir in zwei Teilen an Hand von praktischen Beispielen aufzeigen. <a href="#">Weiterlesen<< (not linked)</a>
                     </p>
                 </article>
             </section>
@@ -205,7 +234,7 @@
                         haben wir schon mal DANKE gesagt? Nein? Dann wird es jetzt aber mal Zeit:
                     </p>
                     <p>
-                        <a href="#">Weiterlesen</a>
+                        <a href="#">Weiterlesen (not linked)</a>
                     </p>
                 </article>
                 <article class="comment float-lg-end shadow-sm">
@@ -232,17 +261,18 @@
             </div>
             <div id="footer-content" class="col-3 footer-el footer-bg">
                 <div id="footer-submenu">
-                    <img src="./image/footer_icon_submenu.png" id="footer-submenu-icon" alt="">
+                    <div id="footer-submenu-btn"></div>
                     <div id="footer-submenu-links">
-                        <a href="#">link 1</a>
-                        <a href="#">link 2</a>
-                        <a href="#">link 3</a>
+                        <a href="./agb.html">AGB</a>
+                        <a href="./impressum.html">Impressum</a>
+                        <a href="./datenschutz.html">Datenschutz</a>
+                        <a href="./disclaimer.html">Disclaimer</a>
                     </div>
                 </div>
                 <div id="text-resize">
-                    <img src="./image/decrease.png" id="text-decrease" class="text-resize-icon" alt="">
-                    <img src="./image/normal.png" id="text-normal" class="text-resize-icon" alt="">
-                    <img src="./image/increase.png" id="text-increase" class="text-resize-icon" alt="">
+                    <div id="text-decrease-btn" class="text-resize-btn"></div>
+                    <div id="text-normal-btn" class="text-resize-btn"></div>
+                    <div id="text-increase-btn" class="text-resize-btn"></div>
                 </div>
             </div>
         </footer>
