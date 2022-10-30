@@ -445,6 +445,10 @@ main #content article {
 
 /*#region Footer */
 
+/*
+general z-index: 200;
+*/
+
 /*#region footer (general) */
 footer {
     z-index: 200;
@@ -474,6 +478,13 @@ footer .footer-bg {
     background: url(../images/footer_bg.png);
     background-repeat: repeat-x;
     background-position: left;
+}
+
+footer #footer-content {
+    position: relative;
+    padding: 0 0 0 4px;
+    /* to dislpay the footer behind the footer */
+    transform-style: preserve-3d;
 }
 
 /*#endregion footer (general) */
@@ -513,15 +524,11 @@ footer #breadcrumb a:first-child::before {
 /*#endregion breadcrumb */
 
 /*#region submenu */
-footer #footer-submenu {
-    position: relative;
-    padding: 0 1rem;
-}
 
 footer #footer-submenu-btn {
     height: 40px;
     width: 16px;
-    padding: .5rem;
+    padding: .4rem 1rem;
     background: url(../images/footer_submenu_icon.png) no-repeat center;
     cursor: pointer;
 }
@@ -534,9 +541,11 @@ footer #footer-submenu-links {
     position: absolute;
     z-index: 250;
     bottom: -1000%;
-    left: 0;
+    left: 1px;
     transition: all ease 500ms;
     padding: .5rem .5rem 1.5rem .3rem;
+    /* to display the submenu behind the footer */
+    transform: translateZ(-10px);
 
     background-image: url(../images/footer_submenu_bg_top.png), url(../images/footer_submenu_bg_middle.png), url(../images/footer_submenu_bg_bottom.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
@@ -554,7 +563,8 @@ footer #footer-submenu-links a:hover {
 
 footer #footer-submenu-btn:hover+#footer-submenu-links,
 footer #footer-submenu-links:hover {
-    bottom: 80%;
+    bottom: 62%;
+    transform: translateZ(0);
 }
 
 /*#endregion submenu */

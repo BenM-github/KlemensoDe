@@ -1,17 +1,17 @@
 # TO-DO's (BASE FEATURES)
 - Change footer submenu animation design
+    - [done] if there are any bugs I have to redesign it with js
 
 - design and fill smartphone nav
 
 - Add scripts
     - Add Smartphone Nav
     - Add Smartphone triggers
-    - Add footer submenu animation
 
 - Create the repo in our webhost-one server
 
 - Add rest sites
-    - Impressum
+    - footer-submenu
     - low level nav
     - blog entries
 
