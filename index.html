@@ -11,8 +11,7 @@
 </head>
 <body>
     
-    <div id="wrapper" class="container-fluid row justify-content-center">
-
+    <div id="wrapper"   >
         <header class="col-sm-8 row p-0">
             <div id="branding" class="col-sm-5">
                 <a href="#">
@@ -267,6 +266,7 @@
                     <a href="./datenschutz.html">Datenschutz</a>
                     <a href="./disclaimer.html">Disclaimer</a>
                 </div>
+                <a class="footer-link" href="./impressum.html">Impressum</a>
                 <div id="text-resize">
                     <div id="text-decrease-btn" class="text-resize-btn"></div>
                     <div id="text-normal-btn" class="text-resize-btn"></div>
@@ -275,15 +275,27 @@
             </div>
         </footer>
 
-        <div id="background">
-            <div id="bg-info">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eaque dolorem excepturi eius laudantium quasi sit sed, ipsum ullam voluptates!
-            </div>
-            <div id="bg-btn">--> zeige Bild</div>
-        </div>
+    </div> <!--/wrapper-->
 
+    <div id="background">
+        <img src="" alt="" id="bg-img-tmp">
+        <img src="" alt="" id="bg-img">
+        <div id="bg-info-box">
+            <h3 id="bg-info-title">
+                Ameisen
+            </h3>
+            <p id="bg-info-text">
+                Von Martin
+            </p>
+        </div>
+        <div id="bg-gallery">
+            <div id="bg-left-btn">&#60;--</div>
+            <div id="bg-right-btn">--&#62;</div>
+        </div>
+        <div id="bg-trigger">--&#62; zeige Bild</div>
     </div>
 
+    <script src="./styles/js/index.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>

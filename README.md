@@ -1,6 +1,10 @@
 # TO-DO's (BASE FEATURES)
+- provide color for links
+    - like the phone number link in the comments
+
 - Change footer submenu animation design
-    - [done] if there are any bugs I have to redesign it with js
+    - [done]
+    - if there are any bugs I have to redesign it with js
 
 - design and fill smartphone nav
 
