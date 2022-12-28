@@ -21,10 +21,6 @@
 
 - Change Search Bar && add function
 
-- Add resize function
-
-- Add Backgrounds
-
 
 # TO-DO's (NEW CONTENT)
 - CRM
