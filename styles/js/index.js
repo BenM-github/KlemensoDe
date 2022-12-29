@@ -42,9 +42,9 @@ bg_trigger.addEventListener('click', ()=> {
     }
     else
     {
-        header.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
-        main.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
-        footer.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
+        // header.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 1")
+        // main.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 1")
+        // footer.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 1")
         wrapper.setAttribute("style", "transition: all 3000ms ease 0ms; opacity: 1; pointer-events: all;")
         bg_info_box.setAttribute("style", "transition: all 3000ms ease 0ms; opacity: 0")
         
