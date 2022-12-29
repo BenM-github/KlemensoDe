@@ -17,49 +17,6 @@ const main = document.querySelector('main')
 const header = document.querySelector('header')
 //const nav = document.getElementById('small-screen-nav')
 const footer = document.querySelector('footer')
-/*
-
-const bg_btn = document.getElementById('bg-btn')
-var is_content_displayed = true
-
-bg_btn.addEventListener('click', ()=> {
-    if (is_content_displayed == true) {
-        // content fade out
-
-        // header content
-        header.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
-        // main content
-        main.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
-        // nav content (just for the navigation on small screens)
-        // nav.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
-        // footer content
-        footer.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
-        
-        // info block fade in
-        
-        // change the display status 
-        is_content_displayed = false
-    } 
-    else {
-        // content fade in
-        
-        // header content
-        header.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 1")
-        // main content
-        main.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 1")
-        // nav content (just for the navigation on small screens)
-        // nav.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 1")
-        // footer
-        footer.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 1")
-        
-        // info block fade in
-        
-        // change the display status 
-        is_content_displayed = true
-    }
-})
-*/
-
 
 const wrapper = document.querySelector("#wrapper")
 const background = document.querySelector("#bg-img")
@@ -71,9 +28,11 @@ let is_content_displayed = true
 
 // toggles wrapper on and off so users can see the background and its info
 bg_trigger.addEventListener('click', ()=> {
-    if (is_content_displayed == true)
+    if (is_content_displayed)
     {
-        // wrapper.style.opacity = 0
+        // header.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
+        // main.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
+        // footer.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
         wrapper.setAttribute("style", "transition: all 3000ms ease 0ms; opacity: 0; pointer-events: none;")
         bg_info_box.setAttribute("style", "transition: all 3000ms ease 0ms; opacity: 1")
         
@@ -83,17 +42,17 @@ bg_trigger.addEventListener('click', ()=> {
     }
     else
     {
-        // wrapper.style.opacity = 1
+        header.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
+        main.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
+        footer.setAttribute("style", "transition: all 3000ms ease 0s; opacity: 0")
         wrapper.setAttribute("style", "transition: all 3000ms ease 0ms; opacity: 1; pointer-events: all;")
         bg_info_box.setAttribute("style", "transition: all 3000ms ease 0ms; opacity: 0")
-            
+        
         // changes content display status
         is_content_displayed = true
         bg_trigger.innerHTML = "--> zeige Bild"
     }
 })
-/*
-*/
 
 
 /////////////////////////////////////////////////////////////////////////
