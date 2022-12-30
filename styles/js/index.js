@@ -10,9 +10,48 @@ Text Resize:
 Search function: 
 */
 
+/////////////////////////////////////////////////////////////////////////
 // var language = window.navigator.userLanguage || window.navigator.language;
 // alert(language); //works IE/SAFARI/CHROME/FF
 // it (italy), en-US (us englisch), 
+
+
+
+/////////////////////////////////////////////////////////////////////////
+const cookies_container = document.querySelector('#cookies')
+const cookies_submit_all = document.querySelector('#cookies-submit-all')
+const cookies_submit_selected = document.querySelector('#cookies-submit-selected')
+const cookies_submit_none = document.querySelector('#cookies-submit-none')
+const cookies_details_trigger = document.querySelector('#cookies-details-trigger')
+const cookies_details = document.querySelector('#cookies-details')
+var is_details_displayed = false
+
+cookies_details_trigger.addEventListener('click', ()=> {
+    if (is_details_displayed)
+    {
+        cookies_details.setAttribute("style", "display: none;")
+        is_details_displayed = false
+    }
+    else
+    {
+        cookies_details.setAttribute("style", "display: flex;")
+        is_details_displayed = true
+    }
+})
+
+cookies_submit_all.addEventListener('click', ()=> {
+    cookies_container.setAttribute("style", "pointer-events: none;")
+    cookies_container.classList.add("cookies-confirmed")
+})
+cookies_submit_selected.addEventListener('click', ()=> {
+    cookies_container.setAttribute("style", "pointer-events: none;")
+    cookies_container.classList.add("cookies-confirmed")
+})
+cookies_submit_none.addEventListener('click', ()=> {
+    cookies_container.setAttribute("style", "pointer-events: none;")
+    cookies_container.classList.add("cookies-confirmed")
+})
+
 
 
 /////////////////////////////////////////////////////////////////////////

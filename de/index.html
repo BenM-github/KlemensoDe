@@ -262,6 +262,42 @@
             </section>
         </main>
 
+        <div id="cookies" class="content-container d-none">
+            Wir verwenden Cookies, um nützliche Funktionen anzubieten und die Leistung zu messen, um Ihre Erfahrung zu verbessern. Wenn Sie auf "Alle akzeptieren" klicken, stimmen Sie der Verwendung aller Cookies zu. Wenn Sie auf "Ausgewählte akzeptieren" klicken, erklären Sie sich nur mit den von Ihnen ausgewählten Kategorien einverstanden. Weitere Informationen finden Sie in unserer Datenschutzrichtlinie.
+            <form id="cookies-inputs" action="cookies">
+                <p>
+                    <label for="necessary">Notwendig</label>
+                    <input type="checkbox" checked name="necessary" id="necessary">
+                </p>
+                <p>
+                    <label for="performance">Leistung</label>
+                    <input type="checkbox" name="performance" id="performance">
+                </p>
+                <p>
+                    <label for="comfort">Komfort</label>
+                    <input type="checkbox" name="comfort" id="comfort">
+                </p>
+                <div id="cookies-details-trigger">Details&nbsp;<div id="trigger-status">&#8964;</div></div>
+                <input id="cookies-submit-none" type="submit" value="Alle ablehnen">
+                <input id="cookies-submit-selected" type="submit" value="Auswahl akzeptieren">
+                <input id="cookies-submit-all" type="submit" value="Alle akzeptieren">
+            </form>
+            <div id="cookies-details" style="display: none;">
+                <div>
+                    <h4>Notwendig</h4>
+                    Diese Cookies sind für das ordnungsgemäße Funktionieren unserer Website erforderlich, damit Sie die wichtigsten Funktionen nutzen und reibungslos navigieren können. Dazu gehören wichtige Sicherheits- und Zugänglichkeitsfunktionen sowie von Ihnen gewählte Einstellungen wie die Benutzeroberfläche und die Sprache des Übersetzers.
+                </div>
+                <div>
+                    <h4>Leistung</h4>
+                    Cookies, die messen, wie unsere Website genutzt wird. Wir verwenden diese Informationen, um unsere Website und Dienste zu verbessern. Mit diesen Cookies messen wir z. B., wie oft Nutzer zurückkehren und welche Funktionen sie nutzen.
+                </div>
+                <div>
+                    <h4>Komfort</h4>
+                    Diese Cookies ermöglichen es der Website, eine verbesserte Funktionalität und Personalisierung zu bieten. Zum Beispiel können wir uns merken, welche Seiten Sie besucht haben, und Ihr Erlebnis daraufhin personalisieren.
+                </div>
+            </div>
+        </div>
+
         <footer class="fixed-bottom row g-0">
             <div id="footer-hole" class="col-3 footer-el"></div>
             <div id="breadcrumb" class="col-6 footer-el footer-bg">
