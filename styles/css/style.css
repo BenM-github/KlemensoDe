@@ -506,7 +506,7 @@ main #content article {
 
     box-sizing: border-box;
     width: 85%;
-    padding: 2rem 2rem 2rem 1rem;
+    padding: 2rem 2rem 1rem 2rem;
     border-radius: 6px 6px 0 0;
     background-color: #5c605c;
 
@@ -514,6 +514,7 @@ main #content article {
 }
 
 #cookies::after {
+    z-index: 1000000;
     content: '';
     position: absolute;
     bottom: 0;
@@ -571,7 +572,7 @@ main #content article {
 }
 
 .cookies-confirmed {
-    animation: slide-out-bottom 2000ms 500ms;
+    animation: slide-out-bottom 2000ms 250ms forwards;
 }
 
 @keyframes slide-out-bottom {
@@ -610,7 +611,7 @@ footer .footer-el {
 
 footer .footer-el>* {
     margin-top: auto;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 /* we have to do it this way to display the footer hole */
