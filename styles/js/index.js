@@ -10,6 +10,10 @@ Text Resize:
 Search function: 
 */
 
+// var language = window.navigator.userLanguage || window.navigator.language;
+// alert(language); //works IE/SAFARI/CHROME/FF
+// it (italy), en-US (us englisch), 
+
 
 /////////////////////////////////////////////////////////////////////////
 // fadeout content to show background

@@ -8,11 +8,12 @@
     <title>Startseite &#124 klemenso.de</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles/css/style.css">
+    <link rel="stylesheet" href="../styles/css/mobile.css">
 </head>
 <body>
     
     <div id="wrapper"   >
-        <header class="col-sm-8 row p-0">
+        <header class="desktop-screen d-none d-md-flex col-sm-8 row p-0">
             <div id="branding" class="col-sm-5">
                 <a href="./index.html">
                     <img src="../logo.png" class="img-fluid" alt="">
@@ -60,28 +61,31 @@
                     <input id="search-bar-input" type="text" name="search-text-field" placeholder="Geben Sie Ihren Suchbegriff ein">
                     <input id="search-bar-btn" type="button" value="">
                 </form>
-                <!-- 
-                    <div id="search-bar" class="input-group">
-                        <div id="search-bar-input" class="form-outline">
-                            <input type="search" id="form1" class="form-control" />
-                            <label class="form-label" for="form1">Search</label>
-                        </div>
-                        <button id="search-bar-btn" type="button" class="btn btn-primary">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                -->
             </nav>
+        </header>
+        <header class="mobile-screen d-md-none">
+            <div id="branding" class="col-sm-5">
+                <a href="./index.html">
+                    <img src="../logo.png" class="img-fluid" alt="">
+                </a>
+            </div>
+            
             <nav id="nav-touch-screen">
-                <div id="nav-trigger"><i class="bi bi-list"></i></div>
+                <div id="nav-trigger">
+                    <i class="bi bi-list"></i>                
+                </div>
                 <div id="nav-container">
                     <a href="./index.html">Startseite</a>
-                    <a href="Menschen">Menschen</a>
+                    <a href="./menschen.html">Menschen</a>
+                    <a href="./kompetenz.html">Kompetenz</a>
+                    <a href="./beziehung.html">Beziehung</a>
+                    <a href="./blog.html">Blog</a>
+                    <a href="./service.html">Service</a>
                 </div>
             </nav>
         </header>
 
-        <main class="col-sm-8 g-0 row">
+        <main class="desktop-screen col-sm-8 g-0 row">
 <!-- content -->
             <section id="content" class="col-lg-9">
                 <article class="blank-text">
@@ -114,10 +118,12 @@
                 <article class="article">
                     <div class="article-tag grey">Info</div>
                     <h5>.fmp[X]Berlin 2014 - The pan-European Unconference for FileMaker Developers</h5>
-                    <a href="http://www.dotfmp.com/">
-                        <img src="../content/images/dotfmp2014_banner_square.gif" alt="">
-                        &#60;&#60;
-                    </a>
+                    <p>
+                        <a href="http://www.dotfmp.com/">
+                            <img src="../content/images/dotfmp2014_banner_square.gif" alt="">
+                            &#60;&#60;
+                        </a>
+                    </p>
                     <p>
                         Wie schon im letzten Jahr freuen wir uns wieder auf Berlin, zur 2. internationalen FileMaker Entwickler(un)konferenz in Deutschland. Am 2. bis 4. Juni 2014 treffen sich wieder FileMaker Experten aus ganz Europa zu Fachvorträgen und direkten Austausch auf sehr hohem Niveau. Der lockere und unkonventionelle Rahmen machten bereits im letzten Jahr dieses Event so besonders.
                     </p>
@@ -260,7 +266,7 @@
         <footer class="fixed-bottom row g-0">
             <div id="footer-hole" class="col-3 footer-el"></div>
             <div id="breadcrumb" class="col-6 footer-el footer-bg">
-                <a href="#">
+                <a href="./index.html">
                     Startseite
                 </a>
             </div>
@@ -280,7 +286,6 @@
                 </div>
             </div>
         </footer>
-
     </div> <!--/wrapper-->
 
     <div id="background">
@@ -293,6 +298,7 @@
             <p id="bg-info-text">
                 Von Martin
             </p>
+            <div id="app">{{ message }}</div>
         </div>
         <div id="bg-gallery">
             <div id="bg-left-btn">&#60;--</div>
@@ -302,7 +308,6 @@
     </div>
     
     <script src="../styles/js/index.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/57fde69d01.js" crossorigin="anonymous"></script> -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>

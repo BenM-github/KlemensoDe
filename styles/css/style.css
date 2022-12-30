@@ -26,6 +26,7 @@
 body {
     font: 12px 'DejaVu Sans', sans-serif;
     font-weight: 100;
+    line-height: 16px;
     /*
     word-wrap: break-word;
     */
@@ -41,6 +42,10 @@ body {
     padding: 0;
 }
 
+.content-container {
+    max-width: 1024px !important;
+}
+
 /*#endregion general */
 
 
@@ -49,7 +54,7 @@ body {
 /*#region header (normal screen)*/
 header {
     z-index: 100;
-    height: 197px;
+    height: 197px !important;
 
     border-top: 0;
     border-right: 2px;
@@ -62,7 +67,7 @@ header {
     background-image: url(../background/Banner_Ameise_v3.png);
     background-position: 100% 0;
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 60% 197px contain;
 }
 
 header #branding {
@@ -239,12 +244,49 @@ header nav #search-btn-icon {
 /*#endregion header (normal screen) */
 
 /*#region header (small screen) */
+
+header #nav-touch-screen {
+    display: none;
+}
+
 @media all and (max-width: 767px) {
 
     /* sm and smaller */
     header #branding {
         margin: 0 auto;
     }
+
+    header #nav-touch-screen {
+        display: block;
+    }
+
+    header #nav-touch-screen #nav-trigger {
+        height: 1rem;
+        width: 2rem;
+    }
+
+    header #nav-touch-screen #nav-container {
+        z-index: 10000;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: none;
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+
+        box-sizing: border-box;
+        height: 100vh;
+        width: 80vw;
+        padding: 1rem;
+
+
+        background-color: #fff;
+    }
+
+
+
 }
 
 header #nav-trigger-wrapper {
@@ -319,6 +361,10 @@ main #content article {
     margin: .2rem 0 0 0;
 }
 
+.main a {
+    color: #0a71b2;
+}
+
 @media all and (min-width: 992px) {
     main #content article {
         padding: 0 .5rem .5rem 2rem;
@@ -364,6 +410,11 @@ main #content article {
 
 .article-tag.blue {
     background: url(../images/top_b.png) no-repeat left;
+}
+
+.article p {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 .announcement {
@@ -457,8 +508,6 @@ footer {
     z-index: 200;
     height: 52px;
     width: 100%;
-    box-sizing: border-box;
-    padding-top: 0.7rem;
 
     color: #808080;
 }
@@ -467,7 +516,11 @@ footer .footer-el {
     display: flex;
     align-items: center;
     height: 100%;
-    box-sizing: border-box;
+}
+
+footer .footer-el>* {
+    margin-top: auto;
+    margin-bottom: 15px;
 }
 
 /* we have to do it this way to display the footer hole */
@@ -495,7 +548,7 @@ footer #footer-content {
 /*#region breadcrumb */
 footer #breadcrumb a {
     position: relative;
-    margin: 0 0 0 32px;
+    margin-left: 32px;
 
     color: #808080;
     text-decoration: none;
@@ -506,7 +559,7 @@ footer #breadcrumb a:hover {
 }
 
 footer #breadcrumb a:first-child {
-    margin: 0;
+    margin-left: 0;
 }
 
 footer #breadcrumb a::before {
@@ -529,10 +582,10 @@ footer #breadcrumb a:first-child::before {
 /*#region submenu */
 
 footer #footer-submenu-btn {
-    height: 40px;
+    height: 16px;
     width: 16px;
-    padding: .4rem 1rem;
-    background: url(../images/footer_submenu_icon.png) no-repeat center;
+    padding: 0 1rem;
+    background: url(../images/footer_submenu_icon.png) no-repeat bottom;
     cursor: pointer;
 }
 
@@ -589,32 +642,36 @@ footer #text-resize {
     flex-wrap: nowrap;
     justify-content: flex-start;
 
-    margin: 0 .5rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
 }
 
 footer #text-resize .text-resize-btn {
-    height: 40px;
+    height: 16px;
     padding: 0 .5rem;
 
     cursor: pointer;
 }
 
 footer #text-resize #text-decrease-btn {
-    min-width: 10px;
-    max-width: 10px;
-    background: url(../images/decrease.png) no-repeat center;
+    width: 10px;
+    background-image: url(../images/decrease.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 footer #text-resize #text-normal-btn {
-    min-width: 12px;
-    max-width: 12px;
-    background: url(../images/normal.png) no-repeat center;
+    width: 12px;
+    background-image: url(../images/normal.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 footer #text-resize #text-increase-btn {
-    min-width: 14px;
-    max-width: 14px;
-    background: url(../images/increase.png) no-repeat center;
+    width: 14px;
+    background-image: url(../images/increase.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 /*
