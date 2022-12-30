@@ -17,16 +17,13 @@ Search function:
 
 
 
+
 /////////////////////////////////////////////////////////////////////////
-const cookies_container = document.querySelector('#cookies')
-const cookies_submit_all = document.querySelector('#cookies-submit-all')
-const cookies_submit_selected = document.querySelector('#cookies-submit-selected')
-const cookies_submit_none = document.querySelector('#cookies-submit-none')
-const cookies_details_trigger = document.querySelector('#cookies-details-trigger')
 const cookies_details = document.querySelector('#cookies-details')
+const cookie_details_trigger = document.querySelector('#cookies-details-trigger')
 var is_details_displayed = false
 
-cookies_details_trigger.addEventListener('click', ()=> {
+cookie_details_trigger.addEventListener('click', ()=> {
     if (is_details_displayed)
     {
         cookies_details.setAttribute("style", "display: none;")
@@ -39,19 +36,49 @@ cookies_details_trigger.addEventListener('click', ()=> {
     }
 })
 
-cookies_submit_all.addEventListener('click', ()=> {
-    cookies_container.setAttribute("style", "pointer-events: none;")
-    cookies_container.classList.add("cookies-confirmed")
+document.querySelector('#cookies-submit-all').addEventListener('click', ()=> {
+    cookie_submit("all")
 })
-cookies_submit_selected.addEventListener('click', ()=> {
-    cookies_container.setAttribute("style", "pointer-events: none;")
-    cookies_container.classList.add("cookies-confirmed")
+document.querySelector('#cookies-submit-selected').addEventListener('click', ()=> {
+    cookie_submit("selceted")
 })
-cookies_submit_none.addEventListener('click', ()=> {
-    cookies_container.setAttribute("style", "pointer-events: none;")
-    cookies_container.classList.add("cookies-confirmed")
+document.querySelector('#cookies-submit-none').addEventListener('click', ()=> {
+    cookie_submit("none")
 })
 
+function cookie_submit(mode) {
+    const cookies_container = document.querySelector('#cookies')
+    cookies_container.setAttribute("style", "pointer-events: none;")
+    cookies_container.classList.add("cookies-confirmed")
+    
+    if (mode == "selected" || mode =="all")
+    setCookie("cookie", true, 30)
+}
+
+function setCookie(cName, cValue, expirationDate) {
+    let date = new Date()
+    date.setTime(date.getTime() + (expirationDate * 24 * 60 * 60 * 1000))
+    const expires = "expires=" + date.toUTCString()
+    document.cookie = cName + "=" + cValue + "; " + expires + "; path=/"
+}
+
+function getCookie(cName) {
+    const name = cName + "="
+    const cDecoded = decodeURIComponent(document.cookie)
+    const cArr = cDecoded.split("; ")
+    let value
+    cArr.forEach(val => {
+        if (val.indexOf(name) === 00 ) value = val.substring(name.length)
+    })
+    return value
+}
+
+cookie_Message = () => {
+    if (!getCookie("cookie"))
+    document.querySelector('#cookies').style.display = "block"
+}
+
+window.addEventListener('load', cookie_Message())
 
 
 /////////////////////////////////////////////////////////////////////////
@@ -109,8 +136,7 @@ const img_transition_time = 5000
 // sets start background so the background is not empty for the time before the interval sets in
 background.setAttribute("style", "transition: all 3000ms ease 0s; background-image: url(../styles/background/" + images[0]   + ");")
     
-function change_bg_img(value)
-{
+function change_bg_img(value) {
     if (value == 1 && index < images.length - 1 )
     {
         index += 1
