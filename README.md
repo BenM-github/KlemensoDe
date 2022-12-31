@@ -1,48 +1,26 @@
 # TO-DO's (BASE FEATURES)
-- Change footer submenu animation design 
-    - [done]
-    - if there are any bugs I have to redesign it with js
+- fix a bug on the background fade animation
+    - at the moment the image switch between bg-img-tmp and bg-img is not correct. that causes a "image jump" on every second switch.
 
-- design and fill smartphone nav
+- add the spike the cookie bottom
 
-- Add scripts
-    - Add Smartphone Nav
-    - Add Smartphone triggers
+- add the gallery for the background
 
-- Create the repo in our webhost-one server
+- redesign footer submenu 
+    - cause there are bugs on big screens and it is a bit hard to control how it goes down with plain css 
 
-- Add rest sites
-    - footer-submenu
-    - low level nav
-    - blog entries
+- redesign footer hole cause we limit the content width to 900px the hole is left from the content on big screens
 
-- Change Search Bar && add function
+- design mobile nav (we have to create a new header for the mobile version)
+    - add a btn and a script for it 
 
+- add site search and a better animation
 
-# TO-DO's (NEW CONTENT)
-- CRM
+- switch the site from html to vue mpa
 
-- LIMS
+# TO-DO's (FURTHER FEATURES)
+- add new content like CRM, LIMS, RHA
 
-- RHA
+- link the site to drupal database
 
-
-# TO-DO's (NEW METHODS: VUE)
-- CLI create a vue index.html
-
-- add templates
-
-
-# TO-DO's (NEW METHODS: DATABASE)
-- create a new drupal database
-
-- link field to their places on the website
-
-
-# TO-DO's (NEW FEATURE)
 - multilanguage option
-
-
-# Z-INDEX ARCHIVE
-- wrapper 0 
-    - 
